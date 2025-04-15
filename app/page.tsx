@@ -14,7 +14,7 @@ const page = async () => {
         holas
         <div>Hello {user?.firstName}</div>
 
-   {/*  <div className='h-50 w-100 bg-amber-500 border-emerald-500 border-8'>
+   <div className='h-50 w-100 bg-amber-500 border-emerald-500 border-8'>
     </div>
 
     <div className='h-50 w-100 bg-amber-500 border-emerald-500 border-8'>
@@ -36,7 +36,7 @@ const page = async () => {
     </div>
 
     <div className='h-50 w-100 bg-amber-500 border-emerald-500 border-8'>
-    </div> */}
+    </div> 
 
     </div>
 

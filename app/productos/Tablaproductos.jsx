@@ -15,7 +15,7 @@ const Tablaproductos = (props) => {
         </thead>
         <tbody>
             <tr className="border border-gray-300">
-                <td className="border border-gray-300 px-4 py-2">{JSON.stringify(props.productos)}</td>
+                <td className="border border-gray-300 px-4 py-2">hola</td>
                 <td className="border border-gray-300 px-4 py-2">como </td>
                 <td className="border border-gray-300 px-4 py-2">estas</td>
                 <td className="border border-gray-300 px-4 py-2">
