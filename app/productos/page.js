@@ -8,28 +8,13 @@ import BotomAgregarProducto from "./BotomAgregarProducto";
 
 
 
-async function pedidoraDeDatos() {
-  try {
-    const res = await axios({
-      url: "https://randomuser.me/api/",
-      method: "GET",
-    })
-    return res.data
-  } catch (err) {
-    console.log(err)
-    return null
-  }
-}
 
 
 
 
+ function page() {
 
-async function page() {
 
-  const data = await pedidoraDeDatos()
-  console.log(data)
-  
   return (
 
     <div className="bg-gray-30 shadow-lg flex-grow">
@@ -39,7 +24,7 @@ async function page() {
 
       <BotomAgregarProducto />
 
-      <Tablaproductos productos={data} />
+      <Tablaproductos />
  
 
     </div>
