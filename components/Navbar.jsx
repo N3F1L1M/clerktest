@@ -9,7 +9,7 @@ const Navbar = () => {
 
   if (isLoaded && isSignedIn && user) {
 
-    console.log(user);
+    
 
     return (
       <nav className="bg-gray-900 text-white px-6 py-4  w-full h-15 top-0 left-0 sticky">

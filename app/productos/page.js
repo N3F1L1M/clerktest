@@ -1,34 +1,48 @@
 
 
-import React from 'react'
-import axios from 'axios'
-
 import Tablaproductos from "./Tablaproductos";
 import BotomAgregarProducto from "./BotomAgregarProducto";
+import Imprimidor from './Imprimidor'
 
 
+import { client } from '@/library/Typesense_client';
 
+//FUNCION BUSCADORA TYPESENSE
+async function searchCompanies() {  const searchParameters = {
+    q: 'stark',
+    query_by: 'company_name',
+    filter_by: '',
+    sort_by: '_text_match:desc'  };
+ 
+  try { const results = await client
+      .collections('companies')
+      .documents()
+      .search(searchParameters);
 
+      return results; // Aquí accedes a los resultados
 
-
-
- function page() {
-
-
-  return (
-
-    <div className="bg-gray-30 shadow-lg flex-grow">
-
-      
+  } catch (error) { return ('Error al buscar:', error);}}
+//FUNCION BUSCADORA TYPESENSE
   
 
-      <BotomAgregarProducto />
 
-      <Tablaproductos />
- 
 
-    </div>
-  );
-}
 
-export default page
+
+
+
+
+  async function page() {
+
+  var datos = await searchCompanies();
+
+   return (
+     <div className="bg-gray-30 shadow-lg flex-grow">
+      <Imprimidor datos={datos.hits} />
+       <BotomAgregarProducto />
+       <Tablaproductos />
+     </div>
+   );
+ }
+
+ export default page;
