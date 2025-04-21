@@ -26,11 +26,9 @@ export const metadata: Metadata = {
 export default function RootLayout({children,}: Readonly<{children: React.ReactNode;}>){
   
 
-  
- 
   return (
     <ClerkProvider localization={esMX}>
-      <html lang="en">
+      <html lang="es">
         <body className="flex flex-wrap border-red-700 border-2">
 
           <header className="w-screen  border-amber-400 border-2">

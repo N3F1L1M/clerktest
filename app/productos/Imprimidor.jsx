@@ -6,7 +6,7 @@ const Imprimidor = ({datos}) => {
 
   return (
     <div>
-      sapos
+    
     </div>
   )
 }

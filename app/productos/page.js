@@ -37,7 +37,9 @@ async function searchCompanies() {  const searchParameters = {
   var datos = await searchCompanies();
 
    return (
-     <div className="bg-gray-30 shadow-lg flex-grow">
+     <div className="flex-grow bg-amber-100  p-4">
+
+
       <Imprimidor datos={datos.hits} />
        <BotomAgregarProducto />
        <Tablaproductos />
