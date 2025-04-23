@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export default function Formulario() {
   return (
-    <div className=" bg-gray-100 flex flex-grow items-center justify-center">
+    
       <div className="bg-white shadow-xl rounded-2xl p-8 w-full max-w-2xl">
         <h2 className="text-2xl font-bold mb-6 text-gray-800">
           Agregar Nuevo Producto
@@ -93,6 +93,6 @@ export default function Formulario() {
           
         </form>
       </div>
-    </div>
+   
   )
 }
